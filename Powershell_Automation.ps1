@@ -19,7 +19,8 @@ Jag vill att security_audit.log ska se ut som Bash audit.log filen.
 $logName = "Security" 
 $Directory_for_securitylog = Join-Path $PSScriptRoot "securitylogs" 
 $EvtxFile = Join-Path $Directory_for_securitylog "Security_$((Get-Date -Format 'yyyyMMdd_HHmmss')).evtx"
-$AuditLog = Join-Path $PSScriptRoot "security_audit.log" 
+$AuditLog = Join-Path $PSScriptRoot "json_logs/audit.log"
+
 
 
 <# -----------------------------------------------------------------------------------------------------------------------------------------------
