@@ -16,7 +16,7 @@ Sedan ska python analysera dessa.
 $logName = "Security" 
 $Directory_for_securitylog = Join-Path $PSScriptRoot "securitylogs" 
 $EvtxFile = Join-Path $Directory_for_securitylog "Security_$((Get-Date -Format 'yyyyMMdd_HHmmss')).evtx"
-$AuditLog = Join-Path $PSScriptRoot "audit.log" 
+$AuditLog = Join-Path $PSScriptRoot "security_audit.log" 
 $timestamp = Get-Date -Format "yyyy-MM-dd_HHmmss" 
 
 
@@ -41,13 +41,13 @@ function Write-Audit {
     $HostName = $env:COMPUTERNAME
     $Time = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 
-    "$Time | USER=$User | HOST=$HostName | $Message" |
+    "[ $Time ] Skriptet $(Split-Path -Leaf $PSCommandPath) kördes av användare: $User på host: $HostName" | $Message" |
         Out-File -FilePath $AuditLog -Append -Encoding utf8
 }
 
 try {
     wevtutil epl $logName $EvtxFile
-    Write-Audit "Hämtar en logg MED Wevtutil från '$logName' och exporterar till Evtx: $EvtxFile"
+    Write-Audit "Hämtar en logg MED Wevtutil från '$logName' och exporterar till Evtx:"
 }
 catch {
     Write-Audit "Exporten misslyckades!: $($_.Exception.Message)"
@@ -57,10 +57,6 @@ catch {
 
 Write-Host "Export klar: $EvtxFile"
 Write-Audit "PowerShell-skriptet kördes klart."
-
-<#   Jag har itnte kommit hit ännu, men epl exporterarhela loggen utan att rensa den  detta ska 
-wevtutil epl $logName $EvtxFile
-#>
 
 
 #

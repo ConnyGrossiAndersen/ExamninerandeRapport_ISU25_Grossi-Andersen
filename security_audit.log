@@ -1,0 +1,6 @@
+2026-01-13 18:32:43 | USER=Conny | HOST=GROSSI-ANDERSEN | Hämtar en logg MED Wevtutil från 'Security' och exporterar till Evtx: 'C:\Users\Conny\OneDrive\Skrivbord\ISU25 Halmstad EC Education\ShellScripting & Automation i Python\RapportScript\ExamninerandeRapport_ISU25_Grossi-Andersen\securitylogs\Security_20260113_183243.evtx'
+2026-01-13 18:32:43 | USER=Conny | HOST=GROSSI-ANDERSEN | PowerShell-skriptet kördes klart.
+[ 2026-01-13 18:37:02 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+[ 2026-01-13 18:37:02 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+[ 2026-01-13 18:37:52 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+[ 2026-01-13 18:37:52 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
