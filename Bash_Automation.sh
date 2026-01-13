@@ -20,7 +20,7 @@ Log_files=(
     "/var/log/kern.log"
 )
 #Jag definiera sökvägen till en logg för spårbarhet och revision (Vem kör skriptet och datumstämpel.). 
-Audit_log="$Directory_for_Jsonlogs/audit_jsonfiles.log"
+Audit_log="$Directory_for_Jsonlogs/audit.log"
 
 #-------------------------------------------------------------------------------------
 #-------------------------------INITSIERING-------------------------------------------
