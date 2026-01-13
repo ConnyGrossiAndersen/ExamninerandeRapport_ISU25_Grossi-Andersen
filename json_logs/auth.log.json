@@ -18,5 +18,17 @@
   {"line": "2026-01-13T13:17:01.753946+01:00 Grossi-Andersen CRON[2096]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)"},
   {"line": "2026-01-13T13:17:01.770054+01:00 Grossi-Andersen CRON[2096]: pam_unix(cron:session): session closed for user root"},
   {"line": "2026-01-13T14:17:01.854240+01:00 Grossi-Andersen CRON[2674]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)"},
-  {"line": "2026-01-13T14:17:01.860936+01:00 Grossi-Andersen CRON[2674]: pam_unix(cron:session): session closed for user root"}
+  {"line": "2026-01-13T14:17:01.860936+01:00 Grossi-Andersen CRON[2674]: pam_unix(cron:session): session closed for user root"},
+  {"line": "2026-01-13T15:17:01.912918+01:00 Grossi-Andersen CRON[3436]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)"},
+  {"line": "2026-01-13T15:17:01.918075+01:00 Grossi-Andersen CRON[3436]: pam_unix(cron:session): session closed for user root"},
+  {"line": "2026-01-13T15:53:44.906789+01:00 Grossi-Andersen systemd-logind[198]: The system will power off now!"},
+  {"line": "2026-01-13T15:53:45.333159+01:00 Grossi-Andersen systemd-logind[198]: System is powering down."},
+  {"line": "2026-01-13T15:54:12.664082+01:00 Grossi-Andersen systemd-logind[188]: New seat seat0."},
+  {"line": "2026-01-13T15:54:14.874610+01:00 Grossi-Andersen login[323]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory"},
+  {"line": "2026-01-13T15:54:14.875095+01:00 Grossi-Andersen login[323]: PAM adding faulty module: pam_lastlog.so"},
+  {"line": "2026-01-13T15:54:15.955031+01:00 Grossi-Andersen login[323]: pam_unix(login:session): session opened for user conny_grossiandersen(uid=1000) by conny_grossiandersen(uid=0)"},
+  {"line": "2026-01-13T15:54:16.062275+01:00 Grossi-Andersen systemd-logind[188]: New session 10 of user conny_grossiandersen."},
+  {"line": "2026-01-13T15:54:16.147811+01:00 Grossi-Andersen (systemd): pam_unix(systemd-user:session): session opened for user conny_grossiandersen(uid=1000) by conny_grossiandersen(uid=0)"},
+  {"line": "2026-01-13T16:17:01.649165+01:00 Grossi-Andersen CRON[793]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)"},
+  {"line": "2026-01-13T16:17:01.653463+01:00 Grossi-Andersen CRON[793]: pam_unix(cron:session): session closed for user root"}
 ]

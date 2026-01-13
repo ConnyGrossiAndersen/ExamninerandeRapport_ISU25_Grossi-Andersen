@@ -476,5 +476,15 @@
   {"line": "2026-01-12T13:35:30.354744+01:00 Grossi-Andersen kernel: kvm_amd: Virtual VMLOAD VMSAVE supported"},
   {"line": "2026-01-12T13:35:30.394569+01:00 Grossi-Andersen kernel: weston[332]: memfd_create() called without MFD_EXEC or MFD_NOEXEC_SEAL set"},
   {"line": "2026-01-12T13:36:12.246313+01:00 Grossi-Andersen kernel: hv_balloon: Max. dynamic memory size: 14228 MB"},
-  {"line": "2026-01-12T13:45:24.642743+01:00 Grossi-Andersen kernel: mini_init (285): drop_caches: 1"}
+  {"line": "2026-01-12T13:45:24.642743+01:00 Grossi-Andersen kernel: mini_init (285): drop_caches: 1"},
+  {"line": "2026-01-13T15:54:12.662828+01:00 Grossi-Andersen kernel: EXT4-fs (sdd): unmounting filesystem 90d877db-8151-43e5-9773-f1e48e4197ec."},
+  {"line": "2026-01-13T15:54:12.662830+01:00 Grossi-Andersen kernel: EXT4-fs (sdd): mounted filesystem 90d877db-8151-43e5-9773-f1e48e4197ec r/w with ordered data mode. Quota mode: none."},
+  {"line": "2026-01-13T15:54:12.662833+01:00 Grossi-Andersen kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22"},
+  {"line": "2026-01-13T15:54:12.662834+01:00 Grossi-Andersen kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22"},
+  {"line": "2026-01-13T15:54:12.662845+01:00 Grossi-Andersen kernel: message repeated 4 times: [ misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22]"},
+  {"line": "2026-01-13T15:54:12.662846+01:00 Grossi-Andersen kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2"},
+  {"line": "2026-01-13T15:54:12.662857+01:00 Grossi-Andersen kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22"},
+  {"line": "2026-01-13T15:54:12.662860+01:00 Grossi-Andersen kernel: message repeated 2 times: [ misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22]"},
+  {"line": "2026-01-13T15:54:12.662860+01:00 Grossi-Andersen kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2"},
+  {"line": "2026-01-13T15:54:56.512513+01:00 Grossi-Andersen kernel: mini_init (285): drop_caches: 1"}
 ]
