@@ -1,12 +1,15 @@
 <#
 Syfte: 
-Syftet med detta skript är att jag vill hämta ut loggar med wevtutil från security-loggen. och exportera dem till .\securitylogs i en evtx fil. 
-Sedan ska python analysera dessa. 
+Syftet med detta skript är att jag vill hämta ut loggar med wevtutil från den inbygda security-loggen och konvertera till en EvtxFil
+Exportera den till Securitylogs som Python sen skall Analysera. 
+Jag vill ha loggar för Vem som kör skriptet och från vilken enhet, med tidsstämplar. 
+Jag vill att security_audit.log ska se ut som Bash audit.log filen. 
 #> 
 
 <# -----------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------Definitioner----------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------
+
 1. Inbyggd logg som jag vill exportera
 2. Här hamnar den exporterade loggen,
 3. Definierar Filnamnet på evtx filen jag exporterar med tidstämpel,
@@ -17,37 +20,54 @@ $logName = "Security"
 $Directory_for_securitylog = Join-Path $PSScriptRoot "securitylogs" 
 $EvtxFile = Join-Path $Directory_for_securitylog "Security_$((Get-Date -Format 'yyyyMMdd_HHmmss')).evtx"
 $AuditLog = Join-Path $PSScriptRoot "security_audit.log" 
-$timestamp = Get-Date -Format "yyyy-MM-dd_HHmmss" 
 
 
-
-<# Funktioner-------------------------------------------------------------------------------------------------------------------------------------
+<# -----------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------Funktioner------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------
+
 1. Skapar en mapp/katalog  om den inte redan finns, och undviker fel om den redan skulle vara skapad. 
-2. Här är en funktion för att skriva ut Username, Datornamn och tidstämpel till Auditloggen Hämtad med hjälp av AI för att kunnna skriva ut den.
+2. Här skapas funktionen för Audit loggen. Med tidstämpel.
+3. Loggmeddelanden i ordning efter varandra 
 3. Try kör exporten , Lyckas exporten så skrivs den ut till Auditloggen.  Om det misslyckas, kommer ett felmeddelande och en exit kod.
-4. Sist följer en utskrift att exporten är klar   
+4. Catch fångar upp om det blir fel och loggar detta 
+5. Sist följer en utskrift att exporten är klar   
 #>
 
 if (-not (Test-Path $Directory_for_securitylog)) {
     New-Item -ItemType Directory -Path $Directory_for_securitylog | Out-Null
 }
-
 function Write-Audit {
-    param([string]$Message)
+    param([string]$Message) # Parametern $Message används för texten jag vill logga
 
-    $User = $env:USERNAME
-    $HostName = $env:COMPUTERNAME
     $Time = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    $Line = "[ $Time ] $Message"
 
-    "[ $Time ] Skriptet $(Split-Path -Leaf $PSCommandPath) kördes av användare: $User på host: $HostName" | $Message" |
-        Out-File -FilePath $AuditLog -Append -Encoding utf8
+    # Skriv till audit-loggen
+    $Line | Out-File -FilePath $AuditLog -Append -Encoding utf8
+
+    # Skriv samma rad till terminalen
+    Write-Host $Line
 }
 
+
+<# -----------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------Huvudblock------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------
+#>
+
+#Loggar Starten av skriptet
+$ScriptName = Split-Path -Leaf $PSCommandPath
+$User = $env:USERNAME
+$HostName = $env:COMPUTERNAME
+
+Write-Audit "Skriptet $ScriptName kördes av användare: $User på host: $HostName"
+
+# Exporterar.. och loggar om det fungerar. Jag vill att samma meddelande skall skrivas i terminalen vilket Write-Host ska göra.
 try {
     wevtutil epl $logName $EvtxFile
-    Write-Audit "Hämtar en logg MED Wevtutil från '$logName' och exporterar till Evtx:"
+    Write-Audit "Hämtar en logg MED Wevtutil från '$logName' och exporterar till Evtx-format"
+
 }
 catch {
     Write-Audit "Exporten misslyckades!: $($_.Exception.Message)"
@@ -55,9 +75,8 @@ catch {
     exit 1
 }
 
-Write-Host "Export klar: $EvtxFile"
-Write-Audit "PowerShell-skriptet kördes klart."
+#Loggar att skriptet är klart. Write host har jag för att få en tom rad i terminalen 
+Write-Audit "PowerShell-skriptet kördes klart, exporten lyckades!"
+Write-Host " " 
 
 
-#
-#Write-Host "Hej från PowerShell-Scriptet fungerar!"

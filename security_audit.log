@@ -4,3 +4,35 @@
 [ 2026-01-13 18:37:02 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
 [ 2026-01-13 18:37:52 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
 [ 2026-01-13 18:37:52 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+[ 2026-01-13 18:52:26 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN | Hämtar en logg MED Wevtutil från 'Security' och exporterar till Evtx:
+[ 2026-01-13 18:52:26 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN | PowerShell-skriptet kördes klart.
+[ 2026-01-13 19:24:14 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+[ 2026-01-13 19:24:14 ] Hämtar en logg MED Wevtutil från 'Security' och exporterar till Evtx:
+[ 2026-01-13 19:24:14 ] PowerShell-skriptet kördes klart.
+[ 2026-01-13 19:25:32 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+[ 2026-01-13 19:25:32 ] Hämtar en logg MED Wevtutil från 'Security' och exporterar till Evtx-format
+[ 2026-01-13 19:25:32 ] PowerShell-skriptet kördes klart.
+[ 2026-01-13 19:38:34 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+[ 2026-01-13 19:38:34 ] Hämtar en logg MED Wevtutil från 'Security' och exporterar till Evtx-format
+[ 2026-01-13 19:38:34 ] PowerShell-skriptet kördes klart.
+[ 2026-01-13 19:38:54 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+[ 2026-01-13 19:38:54 ] Hämtar en logg MED Wevtutil från 'Security' och exporterar till Evtx-format
+[ 2026-01-13 19:38:54 ] PowerShell-skriptet kördes klart.
+[ 2026-01-13 19:40:04 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+[ 2026-01-13 19:40:04 ] Hämtar en logg MED Wevtutil från 'Security' och exporterar till Evtx-format
+[ 2026-01-13 19:40:04 ] PowerShell-skriptet kördes klart.
+[ 2026-01-13 19:46:10 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+[ 2026-01-13 19:46:10 ] Hämtar en logg MED Wevtutil från 'Security' och exporterar till Evtx-format
+[ 2026-01-13 19:46:10 ] PowerShell-skriptet kördes klart.
+[ 2026-01-13 19:47:01 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+[ 2026-01-13 19:47:01 ] Hämtar en logg MED Wevtutil från 'Security' och exporterar till Evtx-format
+[ 2026-01-13 19:47:01 ] PowerShell-skriptet kördes klart.
+[ 2026-01-13 19:47:42 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+[ 2026-01-13 19:47:42 ] Hämtar en logg MED Wevtutil från 'Security' och exporterar till Evtx-format
+[ 2026-01-13 19:47:42 ] PowerShell-skriptet kördes klart, exporten lyckades!
+[ 2026-01-13 19:50:57 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+[ 2026-01-13 19:50:57 ] Hämtar en logg MED Wevtutil från 'Security' och exporterar till Evtx-format
+[ 2026-01-13 19:50:57 ] PowerShell-skriptet kördes klart, exporten lyckades!
+[ 2026-01-13 19:53:19 ] Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+[ 2026-01-13 19:53:19 ] Hämtar en logg MED Wevtutil från 'Security' och exporterar till Evtx-format
+[ 2026-01-13 19:53:19 ] PowerShell-skriptet kördes klart, exporten lyckades!
