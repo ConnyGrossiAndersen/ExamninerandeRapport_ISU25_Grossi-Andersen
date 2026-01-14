@@ -96,5 +96,13 @@
   {"line": "2026-01-14T15:23:13.544257+01:00 Grossi-Andersen login[318]: PAM adding faulty module: pam_lastlog.so"},
   {"line": "2026-01-14T15:23:13.902268+01:00 Grossi-Andersen login[318]: pam_unix(login:session): session opened for user conny_grossiandersen(uid=1000) by conny_grossiandersen(uid=0)"},
   {"line": "2026-01-14T15:23:13.949772+01:00 Grossi-Andersen systemd-logind[192]: New session 1 of user conny_grossiandersen."},
-  {"line": "2026-01-14T15:23:13.980780+01:00 Grossi-Andersen (systemd): pam_unix(systemd-user:session): session opened for user conny_grossiandersen(uid=1000) by conny_grossiandersen(uid=0)"}
+  {"line": "2026-01-14T15:23:13.980780+01:00 Grossi-Andersen (systemd): pam_unix(systemd-user:session): session opened for user conny_grossiandersen(uid=1000) by conny_grossiandersen(uid=0)"},
+  {"line": "2026-01-14T15:23:40.662259+01:00 Grossi-Andersen systemd-logind[192]: The system will power off now!"},
+  {"line": "2026-01-14T15:23:40.729278+01:00 Grossi-Andersen systemd-logind[192]: System is powering down."},
+  {"line": "2026-01-14T15:59:23.821568+01:00 Grossi-Andersen systemd-logind[192]: New seat seat0."},
+  {"line": "2026-01-14T15:59:25.124673+01:00 Grossi-Andersen login[316]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory"},
+  {"line": "2026-01-14T15:59:25.124867+01:00 Grossi-Andersen login[316]: PAM adding faulty module: pam_lastlog.so"},
+  {"line": "2026-01-14T15:59:25.529423+01:00 Grossi-Andersen login[316]: pam_unix(login:session): session opened for user conny_grossiandersen(uid=1000) by conny_grossiandersen(uid=0)"},
+  {"line": "2026-01-14T15:59:25.616806+01:00 Grossi-Andersen systemd-logind[192]: New session 1 of user conny_grossiandersen."},
+  {"line": "2026-01-14T15:59:25.640411+01:00 Grossi-Andersen (systemd): pam_unix(systemd-user:session): session opened for user conny_grossiandersen(uid=1000) by conny_grossiandersen(uid=0)"}
 ]

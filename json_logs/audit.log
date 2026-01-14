@@ -42,3 +42,11 @@
 2026-01-14 15:23:26 Skriptet Powershell_Automation.ps1 kÃ¶rdes av anvÃ¤ndare: Conny pÃ¥ host: GROSSI-ANDERSEN
 2026-01-14 15:23:27 HÃ¤mtar en logg MED Wevtutil frÃ¥n 'Security' och exporterar till Evtx-format
 2026-01-14 15:23:27 PowerShell-skriptet kÃ¶rdes klart, exporten lyckades!
+2026-01-14 15:59:25 Skriptet Bash_automation.sh kördes av användare: conny_grossiandersen på host: Grossi-Andersen
+2026-01-14 15:59:25  Bearbetar filer och konverterar till JSON /var/log/syslog → ./json_logs/syslog.json
+2026-01-14 15:59:25  Bearbetar filer och konverterar till JSON /var/log/auth.log → ./json_logs/auth.log.json
+2026-01-14 15:59:26  Bearbetar filer och konverterar till JSON /var/log/kern.log → ./json_logs/kern.log.json
+2026-01-14 15:59:26 Konvertering klart! Programmet avslutas...
+2026-01-14 15:59:38 Skriptet Powershell_Automation.ps1 kÃ¶rdes av anvÃ¤ndare: Conny pÃ¥ host: GROSSI-ANDERSEN
+2026-01-14 15:59:38 HÃ¤mtar en logg MED Wevtutil frÃ¥n 'Security' och exporterar till Evtx-format
+2026-01-14 15:59:38 PowerShell-skriptet kÃ¶rdes klart, exporten lyckades!
