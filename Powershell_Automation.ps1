@@ -76,7 +76,7 @@ catch {
 }
 
 #Loggar att skriptet är klart. Write host har jag för att få en tom rad i terminalen 
-Write-Audit "PowerShell-skriptet kördes klart, exporten lyckades!"
+Write-Audit "PowerShell-skriptet blev klart, exporten lyckades!"
 Write-Host " " 
 
 
