@@ -1,0 +1,6 @@
+# Ignorera loggmappar
+json_logs/
+securitylogs/
+*.log
+*.txt
+*.evtx
