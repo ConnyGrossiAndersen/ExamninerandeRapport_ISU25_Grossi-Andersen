@@ -58,5 +58,9 @@
   {"line": "2026-01-14T09:25:13.844389+01:00 Grossi-Andersen login[370]: PAM adding faulty module: pam_lastlog.so"},
   {"line": "2026-01-14T09:25:14.092095+01:00 Grossi-Andersen login[370]: pam_unix(login:session): session opened for user conny_grossiandersen(uid=1000) by conny_grossiandersen(uid=0)"},
   {"line": "2026-01-14T09:25:14.187721+01:00 Grossi-Andersen systemd-logind[191]: New session 1 of user conny_grossiandersen."},
-  {"line": "2026-01-14T09:25:14.196358+01:00 Grossi-Andersen (systemd): pam_unix(systemd-user:session): session opened for user conny_grossiandersen(uid=1000) by conny_grossiandersen(uid=0)"}
+  {"line": "2026-01-14T09:25:14.196358+01:00 Grossi-Andersen (systemd): pam_unix(systemd-user:session): session opened for user conny_grossiandersen(uid=1000) by conny_grossiandersen(uid=0)"},
+  {"line": "2026-01-14T09:44:16.671796+01:00 Grossi-Andersen polkitd[769]: Loading rules from directory /etc/polkit-1/rules.d"},
+  {"line": "2026-01-14T09:44:16.672193+01:00 Grossi-Andersen polkitd[769]: Loading rules from directory /usr/share/polkit-1/rules.d"},
+  {"line": "2026-01-14T09:44:16.674363+01:00 Grossi-Andersen polkitd[769]: Finished loading, compiling and executing 4 rules"},
+  {"line": "2026-01-14T09:44:16.675266+01:00 Grossi-Andersen polkitd[769]: Acquired the name org.freedesktop.PolicyKit1 on the system bus"}
 ]
