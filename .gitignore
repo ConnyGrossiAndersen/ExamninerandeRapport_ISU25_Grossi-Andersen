@@ -4,3 +4,4 @@ securitylogs/
 *.log
 *.txt
 *.evtx
+*.json
