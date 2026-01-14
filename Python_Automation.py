@@ -9,8 +9,8 @@
 import subprocess
 import os
 import json
-import xml.etre.ElementTree as ET
-from datetime import datetime 
+import xml.etree.ElementTree as ET
+from Evtx.Evtx import Evtx
 
 #-------------------------------------------------------------------------------------
 #-------------------------------DEFINITIONER------------------------------------------
@@ -22,6 +22,7 @@ PowerShell_Script = "./Powershell_Automation.ps1"
 AuditLogg_Directory ="./json_logs/audit.log"
 ClownReport = "./Chaos_in_universe.txt"
 JsonLog_Directory = "./json_logs"
+Evtx_Directory = "./evtx_logs"
 #-------------------------------------------------------------------------------------
 #---------------------------------FUNKTIONER-------------------------------------------
 #-------------------------------------------------------------------------------------
@@ -99,3 +100,46 @@ def analyze_json_logs():
             )
 
     return results     
+
+
+
+# Powershell Evtx-filer 
+def analyze_evtx_files():
+    results = []
+
+    # Hitta alla evtx-filer
+    evtx_files = [f for f in os.listdir(Evtx_Directory) if f.lower().endswith(".evtx")]
+
+    if not evtx_files:
+        results.append("Nu blev det fel! Har du testat IT-for dummies?")
+        return results
+
+    for filename in evtx_files:
+        path = os.path.join(Evtx_Directory, filename)
+
+        try:
+            with Evtx(path) as log:
+                event_count = 0
+                for record in log.records():
+                    xml_str = record.xml()  
+                    root = ET.fromstring(xml_str)
+
+                    
+                    event_id = root.find(".//EventID")
+                    time_created = root.find(".//TimeCreated")
+                    if event_id is not None:
+                        event_count += 1
+
+                results.append(
+                    f"{filename}: {event_count} här händer det grejer! Som tuppen i en hönsgård!"
+                )
+
+        except Exception as e:
+            results.append(
+                f"{filename}: Du kan inte göra någonting rätt, be din mamma om hjälp!. Fel: {e}"
+            )
+
+    return results
+#
+#
+#
