@@ -87,3 +87,31 @@
 [2026-01-14 17:19:04] Python_automation skriptet kördes av Conny på host Grossi-Andersen
 2026-01-14 17:20:10 Python_automation skriptet kördes av Conny på host Grossi-Andersen
 2026-01-14 17:27:06 Skriptet CopyPython_automation.py skriptet kördes av Conny på host Grossi-Andersen
+2026-01-14 17:30:29 Skriptet Python_automation.py kördes av användare: Conny på host: Grossi-Andersen
+2026-01-14 17:34:33 Skriptet Python_automation.py kördes av användare: Conny på host: Grossi-Andersen
+2026-01-14 17:34:37 Skriptet Bash_automation.sh kördes av användare: conny_grossiandersen på host: Grossi-Andersen
+2026-01-14 17:34:38  Bearbetar filer och konverterar till JSON /var/log/syslog → ./json_logs/syslog.json
+2026-01-14 17:34:38  Bearbetar filer och konverterar till JSON /var/log/auth.log → ./json_logs/auth.log.json
+2026-01-14 17:34:38  Bearbetar filer och konverterar till JSON /var/log/kern.log → ./json_logs/kern.log.json
+2026-01-14 17:34:38 Konvertering klart! Programmet avslutas...
+2026-01-14 17:34:50 Skriptet Powershell_Automation.ps1 kÃ¶rdes av anvÃ¤ndare: Conny pÃ¥ host: GROSSI-ANDERSEN
+2026-01-14 17:34:50 HÃ¤mtar en logg MED Wevtutil frÃ¥n 'Security' och exporterar till Evtx-format
+2026-01-14 17:34:50 PowerShell-skriptet kÃ¶rdes klart, exporten lyckades!
+2026-01-14 17:37:34 Skriptet Python_automation.py kördestartades av: Conny via host: Grossi-Andersen
+2026-01-14 17:37:39 Skriptet Bash_automation.sh startades av: conny_grossiandersen via host: Grossi-Andersen
+2026-01-14 17:37:39  Bearbetar filer och konverterar till JSON /var/log/syslog → ./json_logs/syslog.json
+2026-01-14 17:37:39  Bearbetar filer och konverterar till JSON /var/log/auth.log → ./json_logs/auth.log.json
+2026-01-14 17:37:39  Bearbetar filer och konverterar till JSON /var/log/kern.log → ./json_logs/kern.log.json
+2026-01-14 17:37:39 Konvertering klart! Programmet avslutas...
+2026-01-14 17:37:52 Skriptet Powershell_Automation.ps1 startades av: Conny via host: GROSSI-ANDERSEN
+2026-01-14 17:37:52 HÃ¤mtar en logg MED Wevtutil frÃ¥n 'Security' och exporterar till Evtx-format
+2026-01-14 17:37:52 PowerShell-skriptet kÃ¶rdes klart, exporten lyckades!
+2026-01-14 17:39:40 Skriptet Python_automation.py kördestartades av: Conny via host: Grossi-Andersen
+2026-01-14 17:39:45 Skriptet Bash_automation.sh startades av: conny_grossiandersen via host: Grossi-Andersen
+2026-01-14 17:39:45  Bearbetar filer och konverterar till JSON /var/log/syslog → ./json_logs/syslog.json
+2026-01-14 17:39:45  Bearbetar filer och konverterar till JSON /var/log/auth.log → ./json_logs/auth.log.json
+2026-01-14 17:39:45  Bearbetar filer och konverterar till JSON /var/log/kern.log → ./json_logs/kern.log.json
+2026-01-14 17:39:45 Konvertering klart! Programmet avslutas...
+2026-01-14 17:39:58 Skriptet Powershell_Automation.ps1 startades av: Conny via host: GROSSI-ANDERSEN
+2026-01-14 17:39:58 Tar ner en logg MED Wevtutil genom 'Security' och exporterar till Evtx-format
+2026-01-14 17:39:58 PowerShell-skriptet kÃ¶rdes klart, exporten lyckades!

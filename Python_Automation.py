@@ -26,8 +26,8 @@ from Evtx.Evtx import Evtx
 # Några Definitioner på säkvägarna, bashskript, powershellskript samt vart logg skall sparas och en Clownrapport jag ska skapa.
 JsonLog_Directory = "./json_logs"
 AuditLogg_Directory = os.path.join(JsonLog_Directory, "audit.log")
-Bash_Script = "./Bash___automation.sh"
-PowerShell_Script = "./Powershell___Automation.ps1"
+Bash_Script = "./Bash_automation.sh"
+PowerShell_Script = "./Powershell_Automation.ps1"
 ClownReport_Directory ="./reports"
 ClownReport = os.path.join(ClownReport_Directory, "Chaos_in_universe.txt")
 Evtx_Directory = "./securitylogs"
@@ -47,7 +47,7 @@ def log_python_start():
     user = getpass.getuser()
     host = socket.gethostname()
 
-    log_line = f"{timestamp} Skriptet {script_name} kördes av användare: {user} på host: {host}\n"
+    log_line = f"{timestamp} Skriptet {script_name} kördestartades av: {user} via host: {host}\n"
 
     os.makedirs(os.path.dirname(AuditLogg_Directory), exist_ok=True)
 

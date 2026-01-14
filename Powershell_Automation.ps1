@@ -61,12 +61,12 @@ $ScriptName = Split-Path -Leaf $PSCommandPath
 $User = $env:USERNAME
 $HostName = $env:COMPUTERNAME
 
-Write-Audit "Skriptet $ScriptName kördes av användare: $User på host: $HostName"
+Write-Audit "Skriptet $ScriptName startades av: $User via host: $HostName"
 
 # Exporterar.. och loggar om det fungerar. Jag vill att samma meddelande skall skrivas i terminalen vilket Write-Host ska göra.
 try {
     wevtutil epl $logName $EvtxFile
-    Write-Audit "Hämtar en logg MED Wevtutil från '$logName' och exporterar till Evtx-format"
+    Write-Audit "Tar ner en logg MED Wevtutil genom '$logName' och exporterar till Evtx-format"
 
 }
 catch {

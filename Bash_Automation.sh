@@ -30,7 +30,7 @@ Audit_log="$Directory_for_Jsonlogs/audit.log"
 mkdir -p "$Directory_for_Jsonlogs"
 
 #Revision på körloggen: 
-echo "$(date '+%Y-%m-%d %H:%M:%S') Skriptet $(basename "$0") kördes av användare: $USER på host: $(hostname)" \
+echo "$(date '+%Y-%m-%d %H:%M:%S') Skriptet $(basename "$0") startades av: $USER via host: $(hostname)" \
     >> "$Audit_log"
 
 for input_file in /var/log/syslog /var/log/auth.log /var/log/kern.log; do
