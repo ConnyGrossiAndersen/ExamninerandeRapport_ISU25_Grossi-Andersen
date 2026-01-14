@@ -4,6 +4,7 @@ Syftet med detta skript är att jag vill hämta ut loggar med wevtutil från den
 Exportera den till Securitylogs som Python sen skall Analysera. 
 Jag vill ha loggar för Vem som kör skriptet och från vilken enhet, med tidsstämplar. 
 Jag vill att security_audit.log ska se ut som Bash audit.log filen. 
+Meddelanden skrivs också ut till host för att visa användaren om programmet körs lyckat eller ej. 
 #> 
 
 <# -----------------------------------------------------------------------------------------------------------------------------------------------
