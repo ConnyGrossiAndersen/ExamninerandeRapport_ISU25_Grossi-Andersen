@@ -18,12 +18,14 @@ from Evtx.Evtx import Evtx
 #-------------------------------------------------------------------------------------
 
 # Några Definitioner på säkvägarna, bashskript, powershellskript samt vart logg skall sparas och en Clownrapport jag ska skapa
-Bash_Script = "./Bash___automation.sh"
-PowerShell_Script = "./Powershell___Automation.ps1"
+Bash_Script = "./Bash_automation.sh"
+PowerShell_Script = "./Powershell_Automation.ps1"
 AuditLogg_Directory ="./json_logs/audit.log"
-ClownReport = "./Chaos_in_universe.txt"
+ClownReport_Directory ="./reports"
+ClownReport = os.path.join(ClownReport_Directory, "Chaos_in_universe.txt")
 JsonLog_Directory = "./json_logs"
-Evtx_Directory = "./evtx_logs"
+Evtx_Directory = "./securitylogs"
+
 
 #-------------------------------------------------------------------------------------
 #---------------------------------FUNKTIONER------------------------------------------
@@ -141,6 +143,8 @@ def analyze_evtx_logs():
 #-------------------------------------------------------------------------------------
 # Här skriver vi rapporten 
 def write_clown_report(json_results, evtx_results):
+    os.makedirs(ClownReport_Directory, exist_ok=True)
+    
     with open(ClownReport, "w", encoding="utf-8") as f:
         f.write(" --- CHAOS IN THE UNIVERSE REPORT --- \n\n")
         f.write("JSON-loggar\n")
