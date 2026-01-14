@@ -7,6 +7,12 @@
 # JAG HAR AVSIKTLIGT GJORT FEL SÖKVÄG TILL BASH OCH POWERSHELL FÖR ATT MEDDELA ANÄNDAREN ATT DET INTE GICK 
 # Nu några viktiga importer för att få allt att fungera
 # Jag har installerat en Evtx för att få detta fungera. 
+# Jag har kört skriptet i rätt läge med och då får jag ut reports med en Clownrapport med
+# Jag har inte fått in  så att skriptet loggas i audit.log
+
+import getpass
+import socket
+from datetime import datetime
 import subprocess
 import os
 import json
@@ -17,19 +23,36 @@ from Evtx.Evtx import Evtx
 #-------------------------------DEFINITIONER------------------------------------------
 #-------------------------------------------------------------------------------------
 
-# Några Definitioner på säkvägarna, bashskript, powershellskript samt vart logg skall sparas och en Clownrapport jag ska skapa
-Bash_Script = "./Bash_automation.sh"
-PowerShell_Script = "./Powershell_Automation.ps1"
-AuditLogg_Directory ="./json_logs/audit.log"
+# Några Definitioner på säkvägarna, bashskript, powershellskript samt vart logg skall sparas och en Clownrapport jag ska skapa.
+JsonLog_Directory = "./json_logs"
+AuditLogg_Directory = os.path.join(JsonLog_Directory, "audit.log")
+Bash_Script = "./Bash___automation.sh"
+PowerShell_Script = "./Powershell___Automation.ps1"
 ClownReport_Directory ="./reports"
 ClownReport = os.path.join(ClownReport_Directory, "Chaos_in_universe.txt")
-JsonLog_Directory = "./json_logs"
 Evtx_Directory = "./securitylogs"
 
 
 #-------------------------------------------------------------------------------------
 #---------------------------------FUNKTIONER------------------------------------------
 #-------------------------------------------------------------------------------------
+#
+# 1. Skickar till audit.log att Python skriptet startats av vem och vilken host
+# 2. Startar bashscriptet
+# 3. Startar powershellskriptet 
+# 
+def log_python_start():
+    script_name = os.path.basename(__file__)
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    user = getpass.getuser()
+    host = socket.gethostname()
+
+    log_line = f"{timestamp} Skriptet {script_name} kördes av användare: {user} på host: {host}\n"
+
+    os.makedirs(os.path.dirname(AuditLogg_Directory), exist_ok=True)
+
+    with open(AuditLogg_Directory, "a", encoding="utf-8") as f:
+        f.write(log_line)
 
 # Börjar med Bash-Skriptet 
 def run_bash_script():
@@ -58,7 +81,8 @@ def run_powershell_script():
         print("Du har misslyckats här med, du kanske ska be din mamma om hjälp!")
         print(result.stderr)
     else: 
-        print("Klockrent! PowerShell skriptet har körts klart och du har fått en guldmedalj!")  
+        print("Klockrent! PowerShell skriptet har körts klart och du har fått en guldmedalj!") 
+
              
 #-------------------------------------------------------------------------------------
 #---------------------------------RapportAnalys---------------------------------------
@@ -159,7 +183,13 @@ def write_clown_report(json_results, evtx_results):
 #---------------------------------Trouble in paradise --------------------------------
 #-------------------------------------------------------------------------------------        
 # Förenklad version av main som jag haft tidigare
+#
+# Man i turordning,  först skall logg in i audit, sedan skall bashscriptet startas, sen skall powershell startas, därefter skall loggar
+# analyseras, rapporten (clownreport skrivs) .. sen slut.  
+#
+#
 def main():
+    log_python_start()
     run_bash_script()
     run_powershell_script()
     json_results = analyze_json_logs()
