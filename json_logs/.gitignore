@@ -4,3 +4,6 @@
 *.evtx
 *.json
 *.log.json
+*auth.log.json
+*kern.log.json
+syslog.json
