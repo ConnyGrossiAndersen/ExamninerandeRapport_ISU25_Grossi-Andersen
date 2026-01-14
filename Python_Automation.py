@@ -140,6 +140,65 @@ def analyze_evtx_files():
             )
 
     return results
+#-------------------------------------------------------------------------------------
+#---------------------------------Rapportering----------------------------------------
+#-------------------------------------------------------------------------------------
 #
-#
-#
+def write_clown_report(json_results, evtx_results):
+    with open(ClownReport, "w", encoding="utf-8") as f:
+        f.write("========== CHAOS IN THE UNIVERSE ==========\n")
+        f.write("En clownanalys av loggarnas mörka hemligheter\n\n")
+
+        f.write("----- JSON (Linux) -----\n")
+        for line in json_results:
+            f.write(line + "\n")
+
+        f.write("\n----- EVTX (Windows) -----\n")
+        for line in evtx_results:
+            f.write(line + "\n")
+
+        f.write("\n========== SLUT PÅ RAPPORT ==========\n")
+#        
+
+
+def main():
+    print("==========================================")
+    print("   Startar hela logg-cirkusen i Python")
+    print("==========================================\n")
+
+    # 1. Kör Bash-skriptet
+    print("[1] Kör Bash-skriptet...")
+    run_bash_script()
+    print()
+
+    # 2. Kör PowerShell-skriptet
+    print("[2] Kör PowerShell-skriptet...")
+    run_powershell_script()
+    print()
+
+    # 3. Analysera JSON-loggar
+    print("[3] Analyserar JSON-loggar...")
+    json_results = analyze_json_logs()
+    for r in json_results:
+        print("JSON:", r)
+    print()
+
+    # 4. Analysera EVTX-loggar
+    print("[4] Analyserar EVTX-loggar...")
+    evtx_results = analyze_evtx_files()
+    for r in evtx_results:
+        print("EVTX:", r)
+    print()
+
+    # 5. Skriv clownrapporten
+    print("[5] Skriver clownrapporten...")
+    write_clown_report(json_results, evtx_results)
+    print(f"Clownrapport skapad: {ClownReport}")
+
+    print("\n==========================================")
+    print("   Allt klart! Cirkusen är officiellt över")
+    print("==========================================")
+
+# Kör main om skriptet körs direkt
+if __name__ == "__main__":
+    main()
