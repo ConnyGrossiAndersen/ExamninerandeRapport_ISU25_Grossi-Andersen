@@ -4,7 +4,7 @@
 # Python skall starta bash-skriptet och powershell-skriptet för att slippa köra 3 skript för en aktivitet. 
 # Logginsamling: Python startar hämtning av loggar i Linux via Bash och i Windows via Powershell
 # Bash och Powershell hämtar ner filerna i JSON och Evtx -format. Python skall analysera dessa och hämta ut en rapport från filerna. 
-#
+# JAG HAR AVSIKTLIGT GJORT FEL SÖKVÄG TILL BASH OCH POWERSHELL FÖR ATT MEDDELA ANÄNDAREN ATT DET INTE GICK 
 # Nu några viktiga importer för att få allt att fungera
 # Jag har installerat en Evtx för att få detta fungera. 
 import subprocess
@@ -18,8 +18,8 @@ from Evtx.Evtx import Evtx
 #-------------------------------------------------------------------------------------
 
 # Några Definitioner på säkvägarna, bashskript, powershellskript samt vart logg skall sparas och en Clownrapport jag ska skapa
-Bash_Script = "./Bash_automation.sh"
-PowerShell_Script = "./Powershell_Automation.ps1"
+Bash_Script = "./Bash___automation.sh"
+PowerShell_Script = "./Powershell___Automation.ps1"
 AuditLogg_Directory ="./json_logs/audit.log"
 ClownReport = "./Chaos_in_universe.txt"
 JsonLog_Directory = "./json_logs"
@@ -45,7 +45,7 @@ def run_bash_script():
 
 # Dags för Powershell-Skriptet 
 def run_powershell_script():
-    print("Startar Powershell-Skriptet för Windows loggar... Tro fan du lyckades här med")
+    print("Startar Powershell-Skriptet för Windows loggar...")
     result = subprocess.run(
         ["powershell", "-ExecutionPolicy", "Bypass", "-File",PowerShell_Script],
         capture_output=True,
