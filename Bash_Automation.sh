@@ -43,7 +43,7 @@ done
 echo "$(date '+%Y-%m-%d %H:%M:%S') Konvertering klart! Programmet avslutas..." >> "$Audit_log"    
 
 #-------------------------------------------------------------------------------------
-#---------------------------------FUNKTIONER------------------------------------------
+#---------------------------------FUNKTIONER Test------------------------------------------
 #-------------------------------------------------------------------------------------
 #Jag skapar en funktion som hanterar en loggfil  Den ska ta input från en fil (ex syslog) och sedan 
 #ta output från en annan (ex.json_logs) och konvertera till JSON
