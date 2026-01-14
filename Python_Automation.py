@@ -199,6 +199,7 @@ def main():
     print("   Allt klart! Cirkusen är officiellt över")
     print("==========================================")
 
+# Inget mer 
 # Kör main om skriptet körs direkt
 if __name__ == "__main__":
     main()
