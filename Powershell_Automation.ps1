@@ -40,7 +40,7 @@ function Write-Audit {
     param([string]$Message) # Parametern $Message används för texten jag vill logga
 
     $Time = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-    $Line = "[ $Time ] $Message"
+    $Line = "$Time $Message"
 
     # Skriv till audit-loggen
     $Line | Out-File -FilePath $AuditLog -Append -Encoding utf8

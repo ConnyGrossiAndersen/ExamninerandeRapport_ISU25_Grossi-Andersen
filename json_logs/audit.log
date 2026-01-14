@@ -23,3 +23,6 @@
 2026-01-14 09:35:19  Bearbetar filer och konverterar till JSON /var/log/auth.log → ./json_logs/auth.log.json
 2026-01-14 09:35:19  Bearbetar filer och konverterar till JSON /var/log/kern.log → ./json_logs/kern.log.json
 2026-01-14 09:35:19 Konvertering klart! Programmet avslutas...
+2026-01-14 09:39:21 Skriptet Powershell_Automation.ps1 kördes av användare: Conny på host: GROSSI-ANDERSEN
+2026-01-14 09:39:21 Hämtar en logg MED Wevtutil från 'Security' och exporterar till Evtx-format
+2026-01-14 09:39:21 PowerShell-skriptet kördes klart, exporten lyckades!
