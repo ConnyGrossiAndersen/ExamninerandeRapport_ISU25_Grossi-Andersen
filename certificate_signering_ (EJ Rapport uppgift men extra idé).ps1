@@ -32,8 +32,8 @@ Write-Host "Powershell_Automation.ps1 är nu signerat"
 
 <# Kör dessa EN GÅNG i terminalen 
 
-icacls logginsamling.ps1 /inheritance:r
-icacls logginsamling.ps1 /grant "Administrators:R"
-icacls logginsamling.ps1 /grant "LoggCollectorUser:R"
+icacls Powershell_Automation.ps1 /inheritance:r
+icacls Powershell_Automation.ps1 /grant "Administrators:R"
+icacls Powershell_Automation.ps1 /grant "LoggCollectorUser:R"
 
 #>
